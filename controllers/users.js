@@ -4,7 +4,7 @@ const User = require("../models/user");
 //CRUD Controller
 
 //get all users
-exports.getUser = (req, res, next) => {
+exports.getUsers = (req, res, next) => {
   User.findAll()
     .then((users) => {
       res.status(200).json({ users: users });
@@ -84,3 +84,5 @@ exports.deleteUser = (req, res, next) => {
     })
     .catch((err) => console.log(err));
 };
+
+
